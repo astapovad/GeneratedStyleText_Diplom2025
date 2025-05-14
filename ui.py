@@ -10,7 +10,7 @@ language = "українська"
 if st.button("Згенерувати"):
     if topic:
         response = requests.post(
-            "https://<твоє-ім’я-сервісу>.onrender.com/generate",
+            "https://generatedstyletext-diplom2025.onrender.com/",
             json={"topic": topic, "style": style, "language": language}
         )
         if response.status_code == 200:

@@ -14,6 +14,10 @@ class GenerationRequest(BaseModel):
     style: str
     language: str
 
+@app.get(/)
+def read_root():
+    return {"message": "Welcome to the text generation API!"}
+
 @app.post("/generate")
 def generate_text(request: GenerationRequest):
     try:
