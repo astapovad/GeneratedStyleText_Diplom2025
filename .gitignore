@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Env
+.env
+.venv/
+env/
+venv/
+key.env
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/
