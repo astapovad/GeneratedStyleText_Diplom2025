@@ -15,7 +15,7 @@ if st.button("Згенерувати"):
         # Відправка запиту до FastAPI
         try:
             response = requests.post(
-                "https://generatedstyletext-diplom2025.onrender.com",  # Обов'язково перевірте URL
+                "https://generatedstyletext-diplom2025.onrender.com/generate",  # Обов'язково перевірте URL
                 json={"topic": topic, "style": style, "language": language}
             )
 
