@@ -3,6 +3,7 @@ from pydantic import BaseModel
 import openai
 import os
 from dotenv import load_dotenv
+import traceback  # Додано для виводу трейсбеку
 
 load_dotenv()
 
@@ -36,4 +37,6 @@ def generate_text(request: GenerationRequest):
         return {"result": generated_text}
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        # Додано: вивід повного трейсбеку для логів Render
+        print(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=f"Помилка: {str(e)}")
